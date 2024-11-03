@@ -48,7 +48,7 @@
     "extra": {
         "symfony": {
             "allow-contrib": true,
-            "require": "^5.4"
+            "require": "^7.0"
         }
     },
     "scripts": {
