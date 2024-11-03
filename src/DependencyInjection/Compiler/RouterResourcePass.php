@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the LuneticsLocaleBundle package.
  *
@@ -27,7 +28,7 @@ class RouterResourcePass implements CompilerPassInterface
             return;
         }
 
-        $file = $container->getParameter('kernel.cache_dir').'/lunetics_locale/routing.yml';
+        $file = $container->getParameter('kernel.cache_dir') . '/lunetics_locale/routing.yml';
 
         if (!is_dir($dir = dirname($file))) {
             mkdir($dir, 0777, true);

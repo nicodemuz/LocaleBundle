@@ -42,7 +42,7 @@ class MetaValidator
      */
     public function isAllowed($locale)
     {
-        $errorListLocale = $this->validator->validate($locale, new Locale);
+        $errorListLocale = $this->validator->validate($locale, new Locale());
         $errorListLocaleAllowed = $this->validator->validate($locale, new LocaleAllowed);
 
         return (count($errorListLocale) == 0 && count($errorListLocaleAllowed) == 0);

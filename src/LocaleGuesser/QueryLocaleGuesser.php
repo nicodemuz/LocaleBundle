@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the LuneticsLocaleBundle package.
  *
@@ -7,10 +8,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that is distributed with this source code.
  */
+
 namespace Lunetics\LocaleBundle\LocaleGuesser;
 
 use Symfony\Component\HttpFoundation\Request;
 use Lunetics\LocaleBundle\Validator\MetaValidator;
+
 /**
  * This guesser class checks the query parameter for a var
  *
@@ -18,19 +21,10 @@ use Lunetics\LocaleBundle\Validator\MetaValidator;
  */
 class QueryLocaleGuesser extends AbstractLocaleGuesser
 {
-    /**
-     * @var string
-     */
-    private $metaValidator;
-
-    /**
-     * Constructor
-     *
-     * @param MetaValidator $metaValidator       MetaValidator
-     * @param string        $queryParameterName  Query parameter used
-     */
-    public function __construct(MetaValidator $metaValidator, $queryParameterName = '_locale')
-    {
+    public function __construct(
+        private MetaValidator $metaValidator,
+        private $queryParameterName = '_locale'
+    ) {
         $this->queryParameterName = $queryParameterName;
         $this->metaValidator = $metaValidator;
     }

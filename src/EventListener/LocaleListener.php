@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the LuneticsLocaleBundle package.
  *
@@ -7,6 +8,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that is distributed with this source code.
  */
+
 namespace Lunetics\LocaleBundle\EventListener;
 
 use Symfony\Component\EventDispatcher\EventDispatcher;
@@ -108,13 +110,13 @@ class LocaleListener implements EventSubscriberInterface
         if ($locale && $this->bestLocaleMatcher) {
             $locale = $this->bestLocaleMatcher->match($locale);
         }
-        
+
         if ($locale) {
             $this->logEvent('Setting [ %s ] as locale for the (Sub-)Request', $locale);
             $request->setLocale($locale);
             $request->attributes->set('_locale', $locale);
 
-            if (($event->getRequestType() === HttpKernelInterface::MASTER_REQUEST || $request->isXmlHttpRequest())
+            if (($event->getRequestType() === HttpKernelInterface::MAIN_REQUEST || $request->isXmlHttpRequest())
                 && ($manager->getGuesser('session') || $manager->getGuesser('cookie'))
             ) {
                 $localeSwitchEvent = new FilterLocaleSwitchEvent($request, $locale);
