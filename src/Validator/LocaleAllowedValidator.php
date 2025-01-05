@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the LuneticsLocaleBundle package.
  *
@@ -7,6 +8,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that is distributed with this source code.
  */
+
 namespace Lunetics\LocaleBundle\Validator;
 
 use Lunetics\LocaleBundle\LocaleInformation\AllowedLocalesProvider;
@@ -59,7 +61,7 @@ class LocaleAllowedValidator extends ConstraintValidator
      *
      * @throws UnexpectedTypeException
      */
-    public function validate($locale, Constraint $constraint)
+    public function validate($locale, Constraint $constraint): void
     {
         if (null === $locale || '' === $locale) {
             return;
@@ -94,7 +96,7 @@ class LocaleAllowedValidator extends ConstraintValidator
         }
     }
 
-    protected function getAllowedLocales()
+    protected function getAllowedLocales(): array
     {
         if (null !== $this->allowedLocalesProvider) {
             return $this->allowedLocalesProvider->getAllowedLocales();
