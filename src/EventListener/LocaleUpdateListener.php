@@ -126,7 +126,7 @@ class LocaleUpdateListener implements EventSubscriberInterface
     /**
      * {@inheritDoc}
      */
-    public static function getSubscribedEvents()
+    public static function getSubscribedEvents(): array
     {
         return array(
             // must be registered after the Router to have access to the _locale and before the Symfony LocaleListener
