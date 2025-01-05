@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the LuneticsLocaleBundle package.
  *
@@ -7,6 +8,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that is distributed with this source code.
  */
+
 namespace Lunetics\LocaleBundle\Validator;
 
 use Symfony\Component\Intl\Locales;
@@ -66,7 +68,7 @@ class LocaleValidator extends ConstraintValidator
      *
      * @throws \Symfony\Component\Validator\Exception\UnexpectedTypeException
      */
-    public function validate($locale, Constraint $constraint)
+    public function validate($locale, Constraint $constraint): void
     {
         if (null === $locale || '' === $locale) {
             return;
