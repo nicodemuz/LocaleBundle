@@ -36,7 +36,7 @@ class LocaleType extends AbstractType
     /**
      * {@inheritdoc}
      */
-    public function configureOptions(OptionsResolver $resolver)
+    public function configureOptions(OptionsResolver $resolver): void
     {
         parent::configureOptions($resolver);
 
@@ -49,7 +49,7 @@ class LocaleType extends AbstractType
     /**
      * {@inheritdoc}
      */
-    public function getParent()
+    public function getParent(): string
     {
         return 'Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType';
     }
@@ -58,7 +58,7 @@ class LocaleType extends AbstractType
      * @deprecated implement getBlockPrefix in place of getName, implement both for symfony 2.8 based projects
      * {@inheritdoc}
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->getBlockPrefix();
     }
