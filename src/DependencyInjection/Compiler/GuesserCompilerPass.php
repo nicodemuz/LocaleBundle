@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the LuneticsLocaleBundle package.
  *
@@ -26,7 +27,7 @@ class GuesserCompilerPass implements CompilerPassInterface
      *
      * @param ContainerBuilder $container
      */
-    public function process(ContainerBuilder $container)
+    public function process(ContainerBuilder $container): void
     {
         if (false === $container->hasDefinition('lunetics_locale.guesser_manager')) {
             return;
@@ -45,4 +46,3 @@ class GuesserCompilerPass implements CompilerPassInterface
         }
     }
 }
-

@@ -22,7 +22,7 @@ use Symfony\Component\Yaml\Yaml;
  */
 class RouterResourcePass implements CompilerPassInterface
 {
-    public function process(ContainerBuilder $container)
+    public function process(ContainerBuilder $container): void
     {
         if (!$container->getParameter('lunetics_locale.switcher.use_controller') || !$container->getParameter('router.resource')) {
             return;

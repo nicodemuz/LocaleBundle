@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the LuneticsLocaleBundle package.
  *
@@ -7,15 +8,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that is distributed with this source code.
  */
+
 namespace Lunetics\LocaleBundle\Templating\Helper;
 
-use Symfony\Component\Templating\Helper\Helper;
 use Twig\Environment;
 
 /**
  * @author Christophe Willemsen <willemsen.christophe@gmail.com/>
  */
-class LocaleSwitchHelper extends Helper
+class LocaleSwitchHelper
 {
     protected $templating;
 

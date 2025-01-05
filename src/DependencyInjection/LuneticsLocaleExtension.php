@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the LuneticsLocaleBundle package.
  *
@@ -7,6 +8,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that is distributed with this source code.
  */
+
 namespace Lunetics\LocaleBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -25,7 +27,7 @@ class LuneticsLocaleExtension extends Extension
     /**
      * {@inheritDoc}
      */
-    public function load(array $configs, ContainerBuilder $container)
+    public function load(array $configs, ContainerBuilder $container): void
     {
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
@@ -71,7 +73,7 @@ class LuneticsLocaleExtension extends Extension
      * @param string           $name      Alias name
      * @param array            $config    Configuration Array
      */
-    public function bindParameters(ContainerBuilder $container, $name, $config)
+    public function bindParameters(ContainerBuilder $container, $name, $config): void
     {
         if (is_array($config) && empty($config[0])) {
             foreach ($config as $key => $value) {
