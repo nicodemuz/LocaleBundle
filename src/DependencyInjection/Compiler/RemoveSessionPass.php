@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the LuneticsLocaleBundle package.
  *
@@ -21,13 +22,12 @@ use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
  */
 class RemoveSessionPass implements CompilerPassInterface
 {
-    public function process(ContainerBuilder $container)
+    public function process(ContainerBuilder $container): void
     {
         if ($container->hasDefinition('session')) {
             return;
         }
         $container->removeDefinition('lunetics_locale.session_guesser');
         $container->removeDefinition('lunetics_locale.locale_session');
-
     }
 }
