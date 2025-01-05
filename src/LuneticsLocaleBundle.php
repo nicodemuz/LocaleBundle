@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the LuneticsLocaleBundle package.
  *
@@ -7,6 +8,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that is distributed with this source code.
  */
+
 namespace Lunetics\LocaleBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
@@ -27,7 +29,7 @@ class LuneticsLocaleBundle extends Bundle
      * Add CompilerPass
      * @param ContainerBuilder $container
      */
-    public function build(ContainerBuilder $container)
+    public function build(ContainerBuilder $container): void
     {
         parent::build($container);
 
