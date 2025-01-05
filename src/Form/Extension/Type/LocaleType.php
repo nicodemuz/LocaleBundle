@@ -62,11 +62,11 @@ class LocaleType extends AbstractType
     {
         return $this->getBlockPrefix();
     }
-    
+
     /**
      * {@inheritdoc}
      */
-    public function getBlockPrefix()
+    public function getBlockPrefix(): string
     {
         return 'lunetics_locale';
     }
