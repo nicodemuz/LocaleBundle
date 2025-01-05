@@ -26,8 +26,8 @@ use Lunetics\LocaleBundle\Validator\MetaValidator;
 class LocaleController
 {
     public function __construct(
+        private ?RouterInterface $router,
         private MetaValidator $metaValidator,
-        private ?RouterInterface $router = null,
         private bool $useReferrer = true,
         private ?string $redirectToRoute = null,
         private int $statusCode = 302
