@@ -181,7 +181,7 @@ class LocaleUpdateTest extends TestCase
 
     private function getEvent(Request $request)
     {
-        return new ResponseEvent($this->createMock(HttpKernelInterface::class), $request, HttpKernelInterface::MASTER_REQUEST, new Response);
+        return new ResponseEvent($this->createMock(HttpKernelInterface::class), $request, HttpKernelInterface::MAIN_REQUEST, new Response);
     }
 
 

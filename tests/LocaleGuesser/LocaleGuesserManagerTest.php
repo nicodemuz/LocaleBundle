@@ -121,7 +121,7 @@ class LocaleGuesserManagerTest extends TestCase
 
     private function getRequestWithLocaleQuery($locale = 'en')
     {
-        $request = Request::create(' / hello - world', 'GET');
+        $request = Request::create('/hello - world', 'GET');
         $request->query->set('_locale', $locale);
 
         return $request;
@@ -129,7 +129,7 @@ class LocaleGuesserManagerTest extends TestCase
 
     private function getRequestWithoutLocaleQuery()
     {
-        $request = Request::create(' / hello - world', 'GET');
+        $request = Request::create('/hello - world', 'GET');
 
         return $request;
     }

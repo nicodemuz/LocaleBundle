@@ -15,12 +15,12 @@ jobs:
       fail-fast: false
       matrix:
         symfony-version:
-          - '^5.4'
-          - '^7.0'
+          - "^5.4"
+          - "^7.0"
         php-version:
-          - '7.2.5'
-          - '7.4'
-          - '8.2'
+          - "8.2"
+          - "8.3"
+          - "8.4"
         dependencies:
           - "lowest"
           - "highest"
@@ -58,15 +58,15 @@ jobs:
       fail-fast: false
       matrix:
         symfony-version:
-          - '^6.0'
+          - "^6.0"
         php-version:
-          - '8.1'
-          - '8.2'
+          - "8.1"
+          - "8.2"
         dependencies:
           - "lowest"
           - "highest"
-#        include:
-#          - { php-version: '8.2', dependencies: 'highest', composer-options: '--ignore-platform-req=php' }
+    #        include:
+    #          - { php-version: '8.2', dependencies: 'highest', composer-options: '--ignore-platform-req=php' }
 
     steps:
       - name: Checkout code
