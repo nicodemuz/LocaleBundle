@@ -49,7 +49,7 @@ class LocaleType extends AbstractType
     /**
      * {@inheritdoc}
      */
-    public function getParent(): string
+    public function getParent(): ?string
     {
         return 'Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType';
     }
