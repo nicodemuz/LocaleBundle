@@ -25,7 +25,7 @@ use Symfony\Component\Validator\Exception\UnexpectedTypeException;
 class LocaleAllowedValidator extends ConstraintValidator
 {
     /**
-     * @var AllowedLocalesProvider
+     * @var AllowedLocalesProvider|null
      */
     private $allowedLocalesProvider;
 
@@ -42,9 +42,9 @@ class LocaleAllowedValidator extends ConstraintValidator
     /**
      * Constructor
      *
-     * @param AllowedLocalesProvider  $allowedLocalesProvider  allowed locales provided by service
-     * @param bool                    $strictMode              Match locales strict (e.g. de_DE will not match allowedLocale de)
-     * @param bool                    $intlExtension           Whether the intl extension is installed
+     * @param AllowedLocalesProvider|null  $allowedLocalesProvider  allowed locales provided by service
+     * @param bool                         $strictMode              Match locales strict (e.g. de_DE will not match allowedLocale de)
+     * @param bool                         $intlExtension           Whether the intl extension is installed
      */
     public function __construct(AllowedLocalesProvider $allowedLocalesProvider = null, $strictMode = false, $intlExtension = false)
     {
